@@ -17,10 +17,10 @@ Member <|-- BoardMember
 AAUOC o-- Location
 AAUOC o-- Person
 AAUOC o-- Event
-Event -- Location
-BoardMeeting -- BoardMember
-Conference -- Person
-Event -- Member
+Event -- Location:isLocated In
+BoardMeeting -- BoardMember:attendsTo
+Conference -- Person:attendsTo
+Event -- Member:attendsTo
 
 class AAUOC {
   newLocation(I: Location): void
