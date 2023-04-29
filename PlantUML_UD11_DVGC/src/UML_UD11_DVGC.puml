@@ -22,5 +22,31 @@ BoardMeeting -- BoardMember
 Conference -- Person
 Event -- Member
 
+class AAUOC {
+  newLocation(I: Location): void
+  newEvent(e: Event): void
+  newPerson(p: Person): void
+  informEvent(e: Event): void
+  register(m: Member, e: Event): void
+}
+class Location{
+    description: String
+    address: String
+}
+class Person{
+name: String
+}
+class Event{
+date: Date
+description: String
+assign(I:Location): void
+}
+class Member{
+e-mail: String
+}
+class Conference{
+max_attendees: Integer
+}
+
 
 @enduml
