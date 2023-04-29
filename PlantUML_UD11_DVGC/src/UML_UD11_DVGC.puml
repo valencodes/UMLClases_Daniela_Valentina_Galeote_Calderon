@@ -2,8 +2,16 @@
 class Member
 class BoardMember
 class Event
-class Conferencia
+class Conference
 class BoardMeeting
 class Location
 class Person
+
+skinparam groupInheritance 2
+Event <|-- Conference
+Event <|-- BoardMeeting
+
+Person <|-- Member
+Member <|-- BoardMember
+
 @enduml
