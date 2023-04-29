@@ -6,6 +6,7 @@ class Conference
 class BoardMeeting
 class Location
 class Person
+class AAUOC
 
 skinparam groupInheritance 2
 Event <|-- Conference
@@ -13,5 +14,13 @@ Event <|-- BoardMeeting
 
 Person <|-- Member
 Member <|-- BoardMember
+AAUOC o-- Location
+AAUOC o-- Person
+AAUOC o-- Event
+Event -- Location
+BoardMeeting -- BoardMember
+Conference -- Person
+Event -- Member
+
 
 @enduml
